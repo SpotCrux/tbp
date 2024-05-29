@@ -1,0 +1,32 @@
+---
+layout: 'base.njk'
+title: Devotional
+---
+
+
+<section class='my-24'>
+    <div class="px-[10%] flex justify-between mb-16 items-center text-gray-700">
+    <h2 class='text-5xl font-semibold '>Daily Dose of <span class="text-orange-500"> Wisdom </span></h2>
+    </div>
+    <ul class="grid grid-cols-4 gap-4 px-[10%] text-gray-700 ">
+    {%- for dev in collections.dev -%}
+    <a href="{{ dev.url }}"> 
+       
+        <li class="shadow-lg p-4">
+           <article>
+            <p class='pl-2'>{{ dev.data.month }}</p>
+            <h2 class="text-7xl font-semibold py-4 -mt-4 text-orange-500">{{ dev.data.day }}</h2>
+            <p class="-mt-4 pl-2 mb-4">{{ dev.data.year }}</p>
+            <h3 class='mb-4 font-bold text-gray-800 text-xl'>{{ dev.data.verse }}</h3>
+          
+            <p class="text-sm">{{ dev.data.description }}</p>
+        
+           
+           </article>
+        </li>
+    
+    </a>
+      
+    {%- endfor -%}
+    </ul>
+</section>

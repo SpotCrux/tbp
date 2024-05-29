@@ -1,0 +1,112 @@
+---
+layout: 'base.njk'
+title: Home
+---
+
+<main>
+<section class="flex justify-between px-[10%] items-center" id="hero">
+    <section class="">
+    <p class="text-7xl font-extrabold text-orange-600">STRENGTHEN THE FOUNDATION</p>
+    <p class="text-lg  text-gray-600 py-8">"Elevate your ministry by fortifying the foundations of your faith, cultivating resilience, and maximizing impact for a transformative and purpose-driven journey."</p>
+   
+    
+    </section>  
+    
+    <img src="../assets/img.webp" alt="hero_background" class="grayscale">
+</section>
+
+{# articles #}
+
+<section class='bg-gray-100 py-28'>
+    <div class="px-[10%] flex justify-between mb-16 items-center text-gray-700">
+    <h2 class='text-5xl font-semibold '>Blog Post</h2>
+    <a href="/blog">Read more &rarr;</a>
+    </div>
+    <ul class="grid grid-cols-3 gap-12 px-[10%] ">
+    {%- for blog in collections.blog -%}
+        {% if loop.index0 < 3 %}
+        <li>
+           <article>
+            <img src="{{ blog.data.image }}" alt="{{ blog.data.imgAlt}}">
+            <h2 class="text-2xl font-bold py-4 text-gray-800">{{ blog.data.title }}</h2>
+            <p class="mb-4">{{ blog.data.description }}</p>
+            <a href="{{ blog.url }}">Read more &rarr;</a>
+          
+            
+           </article>
+        </li>
+        {% endif %}
+    {%- endfor -%}
+    </ul>
+</section>
+
+
+
+
+<section class='flex justify-between px-[10%] gap-6 items-center bg-orange-600 ' > 
+    <div class='h-60'>
+    <p class='text-7xl font-bold mb-6 text-orange-300'>YES,<br>YOU CAN!</p>
+    <p class='pr-6 text-orange-200 text-xl'>Anchored your life to Jesus. Trust Him deeply; with all our heart & soul. Because by God's power, you can do everything through Him.
+    <br><br>
+    <span class='font-bold'>“Anyone who believes in him will never be put to shame.”</span><br>
+    <em>-Romans 10:11</em> <br><br>
+
+    </p>
+     
+    </div>
+    <img src="../assets/img1.webp" alt="" class=''>   
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class='my-14'>
+    <div class="px-[10%] flex justify-between mb-16 items-center text-gray-700">
+    <h2 class='text-5xl font-semibold '>Daily Dose of Wisdom</h2>
+    <a href="/devotional" class="text-orange-500">Read more &rarr;</a>
+    </div>
+    <ul class="grid grid-cols-5 gap-2 px-[10%] ">
+    {%- for dev in collections.dev -%}
+        {% if loop.index0 < 5 %}
+        <a href="{{ dev.url }}"> 
+       
+        <li class="shadow-lg p-4">
+           <article>
+            <p class='pl-2'>{{ dev.data.month }}</p>
+            <h2 class="text-7xl font-semibold py-4 -mt-4 text-orange-500">{{ dev.data.day }}</h2>
+            <p class="-mt-4 pl-2 mb-4">{{ dev.data.year }}</p>
+         
+        
+           
+           </article>
+        </li>
+    
+    </a>
+        {% endif %}
+    {%- endfor -%}
+    </ul>
+</section>
+
+<section class="flex gap-4 justify-around py-8 items-center bg-zinc-800 text-zinc-400">
+<p>Subscribe now:</p>
+<form action="">
+<input type="email" placeholder="Type your email here..." class="w-[500px]">
+<button class="text-zinc-300 bg-red-500 rounded-sm px-8 py-2">Subscribe</button>
+</form>
+</section>
+
+</main>

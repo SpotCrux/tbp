@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" class='scroll-smooth'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/d032355450.js" crossorigin="anonymous"></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+{%- include 'header.njk' -%}
+{{ content | safe }}
+{%- include 'footer.njk' -%}
+</body>
+</html>

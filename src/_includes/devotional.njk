@@ -1,0 +1,14 @@
+---
+layout: 'base.njk'
+---
+
+<article class='px-[10%] pt-8'>
+
+    <p>{{ month }}</p>
+    <h2 class="text-2xl font-semibold py-4 text-center">{{ date }}</h2>
+    <p class="text-sm font-semibold py-4 text-center"> {{ year }}</p>
+
+     {{ content | safe }}       
+
+</article>
+

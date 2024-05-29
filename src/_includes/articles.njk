@@ -1,0 +1,14 @@
+---
+layout: 'base.njk'
+---
+
+<article class='px-[10%] pt-8'>
+
+    <img src="{{ image }}" alt="{{ imgAlt }}" class="mt-6">
+    <h2 class="text-2xl font-semibold py-4">{{ title }}</h2>
+    <p class="text-sm font-semibold py-4">By: {{ author }}</p>
+
+     {{ content | safe }}       
+
+</article>
+
