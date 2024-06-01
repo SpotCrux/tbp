@@ -2,13 +2,17 @@
 layout: 'base.njk'
 ---
 
-<article class='px-[10%] pt-8'>
+<article class="px-[10%] pt-8">
+<div class='flex gap-2 font-semibold text-zinc-800 text-2xl'>
+<p>{{ month }}</p>
+<p>{{ day }},</p>
+<p>{{ year }}</p>
+</div>
 
-    <p>{{ month }}</p>
-    <h2 class="text-2xl font-semibold py-4 text-center">{{ date }}</h2>
-    <p class="text-sm font-semibold py-4 text-center"> {{ year }}</p>
+<p>{{ description }}</p>
 
+<section class='py-6'>
      {{ content | safe }}       
-
+</section>
 </article>
 

@@ -6,9 +6,8 @@ month: January
 day: "01"
 year: "2025"
 verse: John 3:16
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non turpis nulla. Praesent et libero vestibulum, mattis tortor quis, volutpat tellus.
+description: For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. 
 ---
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non turpis nulla. Praesent et libero vestibulum, mattis tortor quis, volutpat tellus. Maecenas volutpat ultrices mauris pharetra elementum. Quisque congue neque magna, id iaculis lacus venenatis et. Morbi tincidunt tortor et nibh scelerisque, eu vehicula mauris auctor. Nullam ullamcorper suscipit massa sed lobortis. Curabitur nec nisi nec elit pellentesque pretium. Mauris id dolor sodales, pretium massa non, tristique purus. Sed egestas est et massa suscipit, eu auctor massa consectetur. Aliquam in ullamcorper sem, vel tincidunt est. Sed purus sapien, tincidunt id lacus varius, suscipit ultrices diam. Maecenas commodo ut nunc at suscipit. Sed congue urna eget porttitor vestibulum. Aenean ut ligula ut ante blandit elementum. Pellentesque vitae pulvinar velit.
 
 Mauris id accumsan est. Aenean sit amet aliquam est. Cras quam nibh, aliquam non nisi vitae, laoreet fermentum nisl. Donec id nisl orci. Suspendisse malesuada dapibus luctus. Sed porttitor orci at metus porttitor aliquet. Nam mollis dictum nibh, a luctus nibh vulputate at.

@@ -4,10 +4,10 @@ title: Home
 ---
 
 <main>
-<section class="flex justify-between items-center bg-cover bg-bottom " style='background-image:url(/assets/img-bg.webp); ' id="hero">
-    <section class=""
+<section class="flex justify-between items-center bg-cover bg-bottom " style='background-image:url(https://i.postimg.cc/h4QHm93y/img-bg.jpg); ' id="hero">
+    <section class="w-full"
     style="background-color: rgba(255,255,255, 0.8)">>
-    <p class="px-[10%] text-8xl font-extrabold text-orange-500 text-center pt-32     ">STRENGTHEN THE FOUNDATION</p>
+    <p class="px-[10%] text-8xl font-extrabold text-violet-700 text-center pt-32     ">STRENGTHEN THE FOUNDATION</p>
     <p class="text-xl font-medium text-zinc-800 py-8 text-center pb-40 px-[10%]">"Elevate your ministry by fortifying the foundations of your faith, cultivating resilience, and maximizing impact for a transformative and purpose-driven journey."</p>
    
     
@@ -45,7 +45,7 @@ title: Home
 
 
 <section class='flex justify-between px-[10%] gap-6 items-center bg-violet-800 ' > 
-    <div class='h-60'>
+    <div class=''>
     <p class='text-7xl font-bold mb-6 text-violet-300'>YES,<br>YOU CAN!</p>
     <p class='pr-6 text-violet-200 text-xl'>Anchored your life to Jesus. Trust Him deeply; with all our heart & soul. Because by God's power, you can do everything through Him.
     <br><br>
@@ -90,6 +90,7 @@ title: Home
             <p class='pl-2'>{{ dev.data.month }}</p>
             <h2 class="text-7xl font-semibold py-4 -mt-4 text-orange-500">{{ dev.data.day }}</h2>
             <p class="-mt-4 pl-2 mb-4">{{ dev.data.year }}</p>
+            <p>{{ dev.data.verse }}</p>
          
         
            
@@ -102,11 +103,32 @@ title: Home
     </ul>
 </section>
 
+<section>
+    <ul class='grid grid-cols-3 gap-6 px-[10%]'>
+          {%- for pods in collections.pods -%}
+        {% if loop.index0 < 3 %}
+        <a href="{{ tags.url }}">
+            <li>
+                <iframe class="w-full h-full " width="800" height="600" src="{{ pods.data.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                 <h2 class='font-bold text-zinc-800 pt-8 pb-4 text-2xl'>{{ pods.data.title }}</h2>
+                    <p>{{ pods.data.description }}</p>
+            </li>
+        </a>
+          {% endif %}
+    {%- endfor -%}
+    </ul>
+</section>
+
+
+
+
+
 <section class="flex gap-4 justify-around py-8 items-center bg-zinc-800 text-zinc-400">
 <p>Subscribe now:</p>
 <form action="">
 <input type="email" placeholder="Type your email here..." class="w-[500px]">
-<button class="text-zinc-300 bg-red-500 rounded-sm px-8 py-2">Subscribe</button>
+<button class="text-zinc-300 bg-violet-500 rounded-sm px-8 py-2">Subscribe</button>
 </form>
 </section>
 

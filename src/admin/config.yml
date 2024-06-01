@@ -18,4 +18,14 @@ collections:
      - { label: "Featured Image", name: "image", widget: "image"}
      - { label: "Image Caption", name: "imgAlt", widget: "string"}
      - { label: "Body", name: "body", widget: "markdown"}
- 
+ -name: "videos"
+     - name: "blog"
+       label: "Videos"
+       folder: "src/podcast"
+       create: true
+       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
+       - { label: "Title", name: "title", widget: "string"}
+       - { label: "Link", name: "description", widget: "link"}
+       - { label: "Tags", name: "tags", widget: "list", default: ["pods"]}
+       - { label: "Body", name: "body", widget: "markdown"}

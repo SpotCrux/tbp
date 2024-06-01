@@ -1,8 +1,23 @@
 ---
 layout: 'base.njk'
-title: Podcast
+title: Videos
 ---
 
-<div class=" px-[10%]">
-  <iframe class="  w-full aspect-[]" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen blockshare="true" ></iframe>
-</div>
+<section>
+
+  <p class="text-5xl pl-[10%] my-16 text-zinc-800 font-semibold">Podcast</p>
+    <ul class='grid grid-cols-3 gap-8 px-[10%]'>
+          {%- for pods in collections.pods -%}
+        
+        <a href="{{ pods.url }}">
+            <li>
+                <iframe class="w-[100%] h-[200px]" src="{{ pods.data.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                 <h2 class='font-bold text-zinc-800 pt-8 pb-4 text-2xl'>{{ pods.data.title }}</h2>
+                    <p>{{ pods.data.description }}</p>
+            </li>
+        </a>
+       
+    {%- endfor -%}
+    </ul>
+</section>
