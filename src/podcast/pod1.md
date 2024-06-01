@@ -1,6 +1,6 @@
 ---
 tags: pods
-link: https://www.youtube.com/embed/E-4CQK4gRSs
+video: https://www.youtube.com/embed/E-4CQK4gRSs
 title: My First Podcast
 description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem modi ad ducimus ipsam maiores!
 ---
