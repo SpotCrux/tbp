@@ -4,7 +4,6 @@ backend:
 
 media_folder: "public/assets"
 public_folder: "/assets"
-
 collections:
   - name: "blog"
     label: "Blogs"
@@ -18,14 +17,13 @@ collections:
      - { label: "Featured Image", name: "image", widget: "image"}
      - { label: "Image Caption", name: "imgAlt", widget: "string"}
      - { label: "Body", name: "body", widget: "markdown"}
- -name: "videos"
-     - name: "videos"
-       label: "Video"
-       folder: "src/podcast"
-       create: true
-       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-      fields:
-       - { label: "Title", name: "title", widget: "string"}
-       - { label: "Tags", name: "tags", widget: "list", default: ["pods"]}
-       - { label: "Video", name: "video", widget: "url"}
-       - { label: "Body", name: "body", widget: "markdown"}
+  - name: "videos"
+    label: "Video"
+    folder: "src/podcast"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Tags", name: "tags", widget: "list", default: ["pods"]}
+      - { label: "Video", name: "video", widget: "url"}
+      - { label: "Body", name: "body", widget: "markdown"}
