@@ -1,3 +1,6 @@
 <footer class="bg-zinc-900 py-6 bottom-0">
-    <p class="text-center text-gray-500">All rights resserve</p>
+    <p class="text-zinc-600 text-center">All rights reserved | <span id="year"></span></p>
 </footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>

@@ -1,40 +1,50 @@
 ---
 layout: 'base.njk'
-title: Home
+title: TBP - Let's Grow Now!
 ---
 
-<main>
-<section class="flex justify-between items-center bg-cover bg-bottom " style='background-image:url(https://i.postimg.cc/h4QHm93y/img-bg.jpg); ' id="hero">
-    <section class="w-full"
-    style="background-color: rgba(255,255,255, 0.8)">>
-    <p class="px-[10%] text-8xl font-extrabold text-violet-700 text-center pt-32     ">STRENGTHEN THE FOUNDATION</p>
-    <p class="text-xl font-medium text-zinc-800 py-8 text-center pb-40 px-[10%]">"Elevate your ministry by fortifying the foundations of your faith, cultivating resilience, and maximizing impact for a transformative and purpose-driven journey."</p>
-   
+
+<section class="bg-fixed"
+style='background:url(https://images.unsplash.com/photo-1602002323568-890067dd4f2c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center; background-size: cover;' id="hero">
     
-    </section>  
-    
-    {# <img src="../assets/img.webp" alt="hero_background" class="max-h-[00px]"> #}
+    <div class="bg-black bg-opacity-50 text-gray-100 tracking-widest">
+        <div class="container py-48 ">
+        <p class="text-7xl font-extrabold text-center">Strengthen Your Foundation</p>
+        <p class="mt-6 text-lg text-center px-[10%]">Elevate your ministry by fortifying the foundations of your faith, cultivating resilience, and maximizing impact for a transformative and purpose-driven journey.</p>
+
+       <div class="mt-8 text-center">
+        <a href="/blog/where-your-foundation-stand" class="border-1  hover:bg-white hover:text-gray-700 text-white bg-indigo-600 px-12 py-4 rounded-full">
+            Let's Grow Now!
+        </a>
+       </div>
+       </div>
+    </div>  
+ 
 </section>
 
+
+
+
+<div class="bg-gray-400">
+    
+</div>
 {# articles #}
 
 <section class='bg-gray-100 py-28'>
-    <div class="px-[10%] flex justify-between mb-16 items-center text-gray-700">
-    <h2 class='text-5xl font-semibold '>Blog Post</h2>
-    <a href="/blog">Read more &rarr;</a>
-    </div>
+    
     <ul class="grid grid-cols-3 gap-12 px-[10%] ">
-    {%- for blog in collections.blog -%}
+    {%- for blog in collections.blog | reverse -%}
         {% if loop.index0 < 3 %}
         <li>
+            <a href="{{ blog.url }}">
            <article>
-            <img src="{{ blog.data.image }}" alt="{{ blog.data.imgAlt}}">
+            <img class="aspect-16/9" src="{{ blog.data.image }}" alt="{{ blog.data.imgAlt}}">
             <h2 class="text-2xl font-bold py-4 text-gray-800">{{ blog.data.title }}</h2>
-            <p class="mb-4">{{ blog.data.description }}</p>
-            <a href="{{ blog.url }}">Read more &rarr;</a>
-          
+            <p class="mb-8">{{ blog.data.description }}</p>
+           
             
            </article>
+           </a>
         </li>
         {% endif %}
     {%- endfor -%}
@@ -132,4 +142,3 @@ title: Home
 </form>
 </section>
 
-</main>

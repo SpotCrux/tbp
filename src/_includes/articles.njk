@@ -1,14 +1,31 @@
 ---
 layout: 'base.njk'
 ---
+<section class="grid grid-cols-6 px-[10%] pt-24D">
+<div class='col-span-5 container  text-zinc-600'>
 
-<article class='px-[10%] pt-8'>
+   <div class="container aspect-16/9" 
+   style="
+   background: url({{ image }}),no-repeat center;
+   background-size: cover; 
+   
+   
+   ">
+    
+   </div>
+    <h2 class="text-5xl font-semibold  text-center mt-8">{{ title }}</h2>
+    <p class="text-sm  text-center mb-10">By: {{ author }}</p>
+    <p class="italic text-lg font-semibold text-center">"{{ bverse }}"</p>
+    <p class="text-center font-bold text-red-500">{{ verse }}</p>
+<div class="py-16 font-medium ">
+     {{ content | safe }}
+   </div>       
 
-    <img src="{{ image }}" alt="{{ imgAlt }}" class="mt-6">
-    <h2 class="text-2xl font-semibold py-4">{{ title }}</h2>
-    <p class="text-sm font-semibold py-4">By: {{ author }}</p>
+</div>
 
-     {{ content | safe }}       
 
-</article>
-
+<div class="col-span-1 bg-gray-900">
+   https://amzn.to/3DP3wdd
+</div>
+</section>
+ 

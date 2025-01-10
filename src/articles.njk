@@ -1,0 +1,47 @@
+---
+layout: 'base.njk'
+title: Articles
+---
+
+
+<section class=''>
+    <div class="h-[60vh] items-center block text-gray-100"
+    style="
+    
+    background: url(https://images.unsplash.com/photo-1642732029645-b5fcffc1136d?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D), no-repeat center bottom;
+    background-size: cover;
+    "    
+    >
+
+    <div class="tracking-widest">
+    <h2 class="text-7xl font-semibold text-center pt-48">Articles</h2>
+    <p class="text-center">Finding Treasure in God's Word and Grow Deeper with it.</p>
+    </div>
+
+    </div>
+
+  
+   
+    <ul class="container py-32 grid grid-cols-2 gap-12 px-10  text-zinc-600 ">
+    {%- for blog in collections.blog | reverse -%}
+       
+        <li>
+            <a href="{{ blog.url }}">
+           <article>
+            <img src="{{ blog.data.image }}"class='aspect-16/9' alt="{{ blog.data.imgAlt}}">
+            <h2 class="text-2xl font-semibold py-4">{{ blog.data.title }}</h2>
+            <p class='mb-4'>{{ blog.data.description }}</p>
+          
+                
+        
+           
+           </article>
+           </a>
+        </li>
+      
+    {%- endfor -%}
+    </ul>
+    
+   
+
+</section>
